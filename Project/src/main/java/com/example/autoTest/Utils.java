@@ -9,6 +9,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Utils {
@@ -21,13 +22,22 @@ public class Utils {
     }
 
     public static String utilGetProjectName(String project_target) {
-        String fileSeparator = "\\";
-        int i = project_target.lastIndexOf(fileSeparator);
-        if (i == -1) {
-            fileSeparator = "/";
-            i = project_target.lastIndexOf(fileSeparator);
+        String fileSeparator = "/";
+        if (project_target.endsWith("/") || project_target.endsWith("\\")) {
+            project_target = project_target.substring(0, project_target.length()-1);
         }
-        File pomFile = new File(project_target.substring(0, i) + File.separator + "pom.xml");
+        String[] paths = project_target.split(File.separator.equals("\\") ? "\\\\" : File.separator);
+        List<String> asList = Arrays.asList(paths);
+        project_target = String.join(File.separator, asList.subList(0, asList.size() - 1)) + File.separator;
+        System.out.println(project_target);
+
+//        int i = project_target.lastIndexOf(fileSeparator);
+//        if (i == -1) {
+//            fileSeparator = "/";
+//            i = project_target.lastIndexOf(fileSeparator);
+//        }
+
+        File pomFile = new File(project_target + "pom.xml");
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
