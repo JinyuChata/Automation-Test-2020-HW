@@ -1,5 +1,6 @@
 ## 命令行
 
+```bash
 java -jar ./testSelection.jar -c /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/0-CMD/target /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/0-CMD/data/change_info.txt
 java -jar ./testSelection.jar -m /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/0-CMD/target /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/0-CMD/data/change_info.txt
 java -jar ./testSelection.jar -c /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/1-ALU/target /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/1-ALU/data/change_info.txt
@@ -12,6 +13,7 @@ java -jar ./testSelection.jar -c /Users/jinyuzhu/Desktop/ClassicAutomatedTesting
 java -jar ./testSelection.jar -m /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/4-NextDay/target /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/4-NextDay/data/change_info.txt
 java -jar ./testSelection.jar -c /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/5-MoreTriangle/target /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/5-MoreTriangle/data/change_info.txt
 java -jar ./testSelection.jar -m /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/5-MoreTriangle/target /Users/jinyuzhu/Desktop/ClassicAutomatedTesting/5-MoreTriangle/data/change_info.txt
+```
 
 ## 备注
 
